@@ -13,7 +13,6 @@ onMounted(() => {
           entry.isIntersecting
         );
       });
-      console.log("entries value: ", entries[0].target.classList);
     },
     {
       threshold: 0.5,
@@ -24,11 +23,6 @@ onMounted(() => {
     observer.observe(selection);
   });
 });
-// const show = ref(false);
-
-// watchEffect(() => {
-//   console.log(show.value);
-// });
 </script>
 
 <template>
@@ -36,219 +30,148 @@ onMounted(() => {
     <div class="card-container flex flex-col">
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
         show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div><div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
-      >
-        this is first card
-      </div>
-
-      <!--<div
-      show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-      show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-      show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
       <div
-        class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400"
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
       >
         this is first card
       </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
+      <div
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
+      >
         this is first card
       </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
+      <div
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
+      >
         this is first card
       </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
+      <div
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
+      >
         this is first card
       </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
+      <div
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
+      >
         this is first card
       </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
+      <div
+        show="true"
+        class="card p-10 border-2 border-black self-start rounded-xl duration-1000 invisible translate-x-40 bg-red-400"
+      >
         this is first card
       </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div>
-      <div class="card p-10 border-2 border-black self-start rounded-xl duration-500 invisible translate-x-40 bg-red-400">
-        this is first card
-      </div> -->
     </div>
   </div>
 </template>
