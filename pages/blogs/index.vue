@@ -1,155 +1,106 @@
 <script setup>
-const router = useRoute();
+import { ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
+
+const root = ref(null);
+const target = ref(null);
+const isVisible = ref(false);
+const intersectionChecker = ref(false);
 
 onMounted(() => {
-  console.log("mounted");
-  const card = ref(document.querySelectorAll(".card"));
-  const observer = ref(new IntersectionObserver((entries) => {
-    console.log("observing");
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(
       (entry) => {
-        entry.target.classList.toggle("me", entry.isIntersecting);
+        entry.target.classList.toggle("show", entry.isIntersecting);
       },
       {
         threshold: 0.5,
       }
     );
-  }));
+  });
 
-  watch(
-    router,
-    (newroute) => {
-      observer.value = new IntersectionObserver((entries) => {
-        console.log("observing");
-        entries.forEach(
-          (entry) => {
-            entry.target.classList.toggle("me", entry.isIntersecting);
-          },
-          {
-            threshold: 0.5,
-          }
-        );
-      });
-    },
-
-  );
-  document.querySelectorAll(".card").forEach((card) => {
-    console.log("another observer", card);
-    observer.value.observe(card);
+  target.value.forEach((card) => {
+    observer.observe(card);
   });
 });
-
-// onUnmounted(() => {
-//   console.log("unmounted");
-//   observer.value.disconnect();
-// });
 </script>
 
-<template>
+<template ref="root">
   <div>
-    <NuxtLink to="/"> Go to blogs </NuxtLink>
-    <div class="flex flex-col">
+    <NuxtLink to="/" class="mb-60">Back to home</NuxtLink>
+
+    <div v-for="i in 1" class="flex flex-col">
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
+        this is first card show
       </div>
       <div
-        me="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
-        this is first card me
-      </div>
-      <div
-        me="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card me
-      </div>
-      <div
-        me="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card me
-      </div>
-      <div
-        me="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card me
-      </div>
-      <div
-        me="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card me
-      </div>
-      <div
-        me="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card me
+        this is first card show
       </div>
     </div>
   </div>
@@ -159,8 +110,10 @@ onMounted(() => {
 .card {
   transition: 500ms;
   transform: translateX(100px);
+  opacity: 0;
 }
-.card.me {
+.card.show {
   transform: translateX(0);
+  opacity: 1;
 }
 </style>

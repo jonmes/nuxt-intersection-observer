@@ -1,144 +1,103 @@
 <script setup>
-const router = useRoute();
+import { ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
 
-// onMounted(() => {
-//   console.log("mounted");
-//   const card = ref(document.querySelectorAll(".card"));
-//   let observer = new IntersectionObserver((entries) => {
-//     // console.log("observing");
-//     entries.forEach(
-//       (entry) => {
-//         entry.target.classList.toggle("show", entry.isIntersecting);
+const root = ref(null);
+const target = ref(null);
+const isVisible = ref(false);
+const intersectionChecker = ref(false);
 
-//       },
-//       {
-//         threshold: 0.5,
-//       }
-//     );
-//   });
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(
+      (entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+  });
 
-//   document.querySelectorAll(".card").forEach((card) => {
-//     console.log("another observer", card);
-//     observer.observe(card);
-//   });
-// });
-
-// onUnmounted(() => {
-//   console.log("unmounted");
-//   observer.value.disconnect();
-// });
+  target.value.forEach((card) => {
+    observer.observe(card);
+  });
+});
 </script>
 
-<template>
+<template ref="root">
   <div>
-    <NuxtLink to="/blogs"> Go to blogs </NuxtLink>
-    <div class="flex flex-col">
-      <iframe
-        id="ytplayer"
-        type="text/html"
-        width="640"
-        height="360"
-        src="https://www.youtube.com/embed/PsfioLd1yvQ?autoplay=1"
-        frameborder="0"
-      ></iframe>
+    <NuxtLink to="/blogs" class="mb-60">Got blog</NuxtLink>
+
+    <div v-for="i in 1" class="flex flex-col">
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
       </div>
       <div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        show="true"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        show="true"
+        ref="target"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
       >
         this is first card show
@@ -151,8 +110,10 @@ const router = useRoute();
 .card {
   transition: 500ms;
   transform: translateX(100px);
+  opacity: 0;
 }
 .card.show {
   transform: translateX(0);
+  opacity: 1;
 }
 </style>
