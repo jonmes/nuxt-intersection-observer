@@ -1,46 +1,25 @@
 <script setup>
-const router = useRoute();
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(
+      (entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+  });
 
-// onMounted(() => {
-//   console.log("mounted");
-//   const card = ref(document.querySelectorAll(".card"));
-//   let observer = new IntersectionObserver((entries) => {
-//     // console.log("observing");
-//     entries.forEach(
-//       (entry) => {
-//         entry.target.classList.toggle("show", entry.isIntersecting);
-
-//       },
-//       {
-//         threshold: 0.5,
-//       }
-//     );
-//   });
-
-//   document.querySelectorAll(".card").forEach((card) => {
-//     console.log("another observer", card);
-//     observer.observe(card);
-//   });
-// });
-
-// onUnmounted(() => {
-//   console.log("unmounted");
-//   observer.value.disconnect();
-// });
+  document.querySelectorAll(".show").forEach((selection) => {
+    observer.observe(selection);
+  });
+});
 </script>
-
 <template>
   <div>
-    <NuxtLink to="/blogs"> Go to blogs </NuxtLink>
+    <NuxtLink to="/blogs"> Go to Home </NuxtLink>
     <div class="flex flex-col">
-      <iframe
-        id="ytplayer"
-        type="text/html"
-        width="640"
-        height="360"
-        src="https://www.youtube.com/embed/PsfioLd1yvQ?autoplay=1"
-        frameborder="0"
-      ></iframe>
       <div
         show="true"
         class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
@@ -146,13 +125,3 @@ const router = useRoute();
     </div>
   </div>
 </template>
-
-<style scoped>
-.card {
-  transition: 500ms;
-  transform: translateX(100px);
-}
-.card.show {
-  transform: translateX(0);
-}
-</style>

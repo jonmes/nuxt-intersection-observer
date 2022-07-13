@@ -4,7 +4,8 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
     modules: [
         // https://tailwindcsss.nuxtjs.org
-        "@nuxtjs/tailwindcss"
+        "@nuxtjs/tailwindcss",
+        'nuxt-use-motion'
       ],
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
