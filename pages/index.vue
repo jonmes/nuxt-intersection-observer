@@ -1,11 +1,6 @@
 <script setup>
-import { ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
-
 const root = ref(null);
 const target = ref(null);
-const isVisible = ref(false);
-const intersectionChecker = ref(false);
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -30,77 +25,115 @@ onMounted(() => {
     <NuxtLink to="/blogs" class="mb-60">Got blog</NuxtLink>
 
     <div v-for="i in 1" class="flex flex-col">
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
-      </div>
-      <div
-        ref="target"
-        class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
-      >
-        this is first card show
+      <div>
+        <div>hello</div>
+        <div>
+          <p
+            ref="target"
+            class="card p-10 border-2 border-black self-start rounded-xl bg-red-400"
+          >
+            this is first card show
+          </p>
+        </div>
       </div>
     </div>
   </div>
